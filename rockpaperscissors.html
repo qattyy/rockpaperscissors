@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+    <script>
+
+        function getComputerChoice(){
+
+            const choice = ["rock", "paper", "scissors"];
+
+            return choice[Math.floor(Math.random() * choice.length)];
+            
+        }       
+
+        function playRound(playerSelection, computerSelection){
+
+            let gamewinner;
+
+            if (playerSelection == "paper" && computerSelection == "rock") {
+                gamewinner = "Player Wins"; 
+            } else if (playerSelection == "paper" && computerSelection == "scissors"){
+                gamewinner = "Player Loses";
+            } else if (playerSelection == "scissors" && computerSelection == "rock"){
+                gamewinner = "Player Loses";
+            } else if (playerSelection == "scissors" && computerSelection == "paper"){
+                gamewinner = "Player Wins";
+            } else if (playerSelection == "rock" && computerSelection == "paper"){
+                gamewinner = "Player Loses";
+            } else if (playerSelection == "rock" && computerSelection == "scissors"){
+                gamewinner = "Player Wins";
+            }
+            
+            if (playerSelection == computerSelection){
+                gamewinner ="DRAW!";
+            }
+
+            console.log(gamewinner);
+        }
+
+        const playerSelection = prompt("What would you like to choose?").toLowerCase();
+        const computerSelection = getComputerChoice();
+        
+        function game(){        
+
+            function playRound(playerSelection,computerSelection);
+
+            let score; 
+            let compscore;
+            if (gamewinner == "Player Wins"){
+                score = 1;
+            } else if (gamewinner == "Player Loses"){
+                compscore = 1;
+            }
+
+        console.log(score, compscore);
+
+        }
+
+        
+
+console.log(game())
+
+
+
+    </script>
+
+
+</body>
+</html>
